@@ -1,0 +1,21 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Useful scripts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitsan/scripts.git"
+  },
+  "keywords": [
+    "scripts"
+  ],
+  "author": "nitsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitsan/scripts/issues"
+  },
+  "homepage": "https://github.com/nitsan/scripts#readme"
+}
