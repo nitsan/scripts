@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Useful scripts",
   "scripts": {
+    "read-excel": "node excel/read-excel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/nitsan/scripts/issues"
   },
-  "homepage": "https://github.com/nitsan/scripts#readme"
+  "homepage": "https://github.com/nitsan/scripts#readme",
+  "dependencies": {
+    "read-excel-file": "^5.6.1",
+    "write-excel-file": "^1.4.22"
+  }
 }
