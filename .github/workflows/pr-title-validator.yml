@@ -1,0 +1,24 @@
+name: PR
+
+on: pull_request
+
+env:
+  PR_TITLE_REGEX: '[feat|fix|docs|style|refactor|perf|test|chore|build]\(+'
+
+jobs:
+  jira_ticket_validator:
+    name: validate title
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check if PR title is valid"
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          echo $PR_TITLE
+          if echo $PR_TITLE | grep -iqE "${PR_TITLE_REGEX}" ; then
+            echo "valid PR title: $PR_TITLE"
+            exit 0
+          else
+            echo "PR title not valid, you will not publish the npm package"
+            exit 1
+          fi
